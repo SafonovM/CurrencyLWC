@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Currency Rates">
+        <h3 class = "slds-m-around_x-small">Currency Rates on {date} date.</h3>
+        <h3 class = "slds-m-around_x-small">Base currency - {base}</h3>
+        
+        <ul class="slds-m-around_medium  slds-has-dividers_top-space">
+            <template for:each={result} for:item="item">
+                <li class="slds-item" key={item.Id}>
+                    {item.key} {item.value}
+                </li>
+            </template>
+        </ul>
+        <lightning-button variant="brand" label="Update Data" title="Update Data" onclick={updateData} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>
